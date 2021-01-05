@@ -1,0 +1,24 @@
+#answer {
+  position: absolute;
+  top: 17px;
+  right: 5%;
+}
+
+#consoleClear {
+  position: absolute;
+  top: 37px;
+  right: 5%;
+}
+
+p {
+  margin: 0;
+  display: inline;
+}
+
+button {
+  margin-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
