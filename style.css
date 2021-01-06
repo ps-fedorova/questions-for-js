@@ -1,13 +1,22 @@
-#answer {
-  position: absolute;
-  top: 17px;
-  right: 5%;
+/** {*/
+/*  outline: green solid 1px;*/
+/*}*/
+
+h1 {
+  padding: 10px 40px;
 }
 
-#consoleClear {
+.info {
   position: absolute;
-  top: 37px;
-  right: 5%;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  margin-right: 10px;
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -15,10 +24,23 @@ p {
   display: inline;
 }
 
-button {
-  margin-left: 20px;
+li {
+  margin: 5px 0;
+  width: 70%;
+  border-bottom: #ff8d00 1px solid;
+  padding-bottom: 5px;
 }
 
-li {
-  margin: 10px 0;
+@media (max-width: 680px) {
+  .info {
+    display: none;
+  }
+  li {
+    width: 100%;
+  }
+
+  ol {
+    padding: 0 40px;
+  }
+
 }

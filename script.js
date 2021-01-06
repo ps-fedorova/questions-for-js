@@ -84,3 +84,55 @@ switch (true) {
 }
 
 document.getElementById('b5').onclick = f5
+
+// 6 Выбрать последний элемент массива let arr = [ 'q', 'w', 'e ', 'r'];
+
+function f6() {
+  console.log('arr[arr.length - 1]')
+}
+
+document.getElementById('b6').onclick = f6;
+
+// 7 Добавить 't' в конец массива let arr = [ 'q', 'w', 'e ', 'r'];
+
+function f7() {
+  console.log('arr[arr.length] = t')
+}
+
+document.getElementById('b7').onclick = f7;
+
+// 8 Написать цикл while, который выведет в консоль все чётные цифры от 10 до 20
+
+function f8() {
+  console.log(`let number = 10;
+
+while (number <= 20) {
+    console.log(number += 2);
+    number += 2;
+} `)
+}
+
+document.getElementById('b8').onclick = f8;
+
+// 9 Написать цикл for, который выведет в консоль все чётные цифры от 10 до 20
+
+function f9() {
+  console.log(`for (let i = 10; i <= 20; i += 2) {
+  console.log(i)
+}`)
+}
+
+document.getElementById('b9').onclick = f9;
+
+// 10 Написать цикл for, который выведет в консоль все чётные цифры от 10 до 20
+
+function f10() {
+  console.log(` условие проверяется после каждой итерации, а не до неё
+ Это гарантирует, что тело цикла выполнится хотя бы один раз.
+ do {
+    <тело цикла>
+} while (условие);
+`)
+}
+
+document.getElementById('b10').onclick = f10;
