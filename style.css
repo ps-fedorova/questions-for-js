@@ -7,7 +7,7 @@ h1 {
 }
 
 .info {
-  position: absolute;
+  position: fixed;
   top: 20px;
   display: flex;
   flex-direction: column;

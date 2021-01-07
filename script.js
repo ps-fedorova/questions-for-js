@@ -124,7 +124,7 @@ function f9() {
 
 document.getElementById('b9').onclick = f9;
 
-// 10 Написать цикл for, который выведет в консоль все чётные цифры от 10 до 20
+// 10 Чем отличается цикл do...while от while?
 
 function f10() {
   console.log(` условие проверяется после каждой итерации, а не до неё
@@ -136,3 +136,73 @@ function f10() {
 }
 
 document.getElementById('b10').onclick = f10;
+
+// 11 Что выведет консоль? Какое значение выводится(старое или новое)?
+
+function f11() {
+  let a = 1;
+  console.log(a++, 'старое');
+  console.log(a--, 'старое');
+  let b = 1;
+  console.log(++b, 'новое');
+  console.log(--b, 'новое');
+  let c = 1;
+  console.log(1 + c, 'новое');
+  console.log(1 - c, 'новое');
+}
+
+document.getElementById('b11').onclick = f11;
+
+// 12 Что делает return? Что вернет функция, если результат отсутствует?
+//    Исполняется ли код после return?
+
+function f12() {
+  console.log(`return завершает выполнение текущей функции и возвращает её значение
+undefined
+нет`);
+}
+
+document.getElementById('b12').onclick = f12;
+
+// 13 Что делает return? Что вернет функция, если результат отсутствует?
+//    Исполняется ли код после return?
+
+function f13() {
+  console.log(`Свойства и методы.
+Если значение представляет собой функцию, такую пару называют методом.
+Если значение — строка, число, булево значение, массив или объект, такую пару называют свойством`);
+}
+
+document.getElementById('b13').onclick = f13;
+
+// 14 Получить доступ к свойству двумя способами
+//    let myObject = { stringKey: 'значение' };
+
+function f14() {
+  console.log(`myObject.stringKey
+myObject['stringKey']
+`);
+}
+
+document.getElementById('b14').onclick = f14;
+
+
+// 15 Проверить, является ли "a" числом
+function f15() {
+  console.log(`let a = 1;
+let b = '1';
+
+function foo(a) {
+  if (typeof a === 'number') {
+    console.log('число')
+  } else {
+    console.log('не число')
+  }
+}
+
+foo(a);
+foo(b);
+`);
+}
+
+document.getElementById('b15').onclick = f15;
