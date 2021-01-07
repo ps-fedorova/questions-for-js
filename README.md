@@ -2,4 +2,4 @@
 
 Базовый JS, вопросы с ответами
 
-ps-fedorova.github.io/questions-for-js/
+https://ps-fedorova.github.io/questions-for-js/
