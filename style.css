@@ -4,8 +4,13 @@
 
 h1 {
   padding: 10px 40px;
+  margin: 0;
 }
-
+h2 {
+  padding: 0 40px;
+  margin: 0;
+  font-size: 20px;
+}
 .info {
   position: fixed;
   top: 20px;

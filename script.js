@@ -1,3 +1,5 @@
+"use strict"
+
 document.getElementById('consoleClear').onclick = console.clear;
 
 // 1 Чем отличается число и строка при выводе в консоль?
@@ -206,3 +208,127 @@ foo(b);
 }
 
 document.getElementById('b15').onclick = f15;
+
+// 16 Что выведет консоль?
+function f16() {
+  console.log(`typeof undefined    // "undefined"
+typeof 0            // "number"
+typeof NaN          // "number"
+typeof -Infinity    // "number"
+typeof 10n          // "bigint"
+typeof true         // "boolean"
+typeof "foo"        // "string"
+typeof Symbol("id") // "symbol"
+typeof Math         // "object"
+typeof null         // "object"
+typeof alert        // "function"
+typeof alert        // "function"
+`);
+}
+
+document.getElementById('b16').onclick = f16;
+
+// 17 Сколько типов данных в JS? Перечислить и описать
+function f17() {
+  console.log(`number для любых чисел: целочисленных или чисел с плавающей точкой; целочисленные значения ограничены диапазоном ±(2^53-1).
+bigint для целых чисел произвольной длины.
+string для строк.
+boolean для true/false.
+null для неизвестных значений. || Значения нет. 
+undefined для неприсвоенных значений. || Значение не определено.
+symbol для уникальных идентификаторов.
+object для более сложных структур данных.
+`);
+}
+
+document.getElementById('b17').onclick = f17;
+
+// 18 Сколько типов данных в JS? Перечислить и описать
+function f18() {
+  console.log(`их 6:
+null
+undefined
+false
+0
+Пустая строка -> ""
+NaN
+`);
+}
+
+document.getElementById('b18').onclick = f18;
+
+// 19 Вывести по первым буквам АННА
+function f19() {
+  console.log(`const acrostic = [
+  'Ангел лёг у края небосклона.',
+  'Наклонившись, удивлялся безднам.',
+  'Новый мир был синим и беззвездным.',
+  'Ад молчал, не слышалось ни стона.'
+];
+
+let annaAkhmatova = '';
+
+for (let i = 0; i < acrostic.length; i += 1) {
+  annaAkhmatova += acrostic[i][0];
+}
+console.log(annaAkhmatova);
+`);
+}
+
+document.getElementById('b19').onclick = f19;
+
+// 20 Написать код, чтобы в консоль вывела undefined и null
+function f20() {
+  console.log(`let elem;
+console.log(elem);
+
+const element = document.querySelector('.class');
+console.log(element);
+`);
+}
+
+document.getElementById('b20').onclick = f20;
+
+// 21 Написать функцию, которая проверяет код на бесконечность
+function f21() {
+  console.log(`function a(x) {
+ let b = Number.isFinite(x);
+  if (b) {
+    return 'Число конечно'
+  } else {
+    return 'Бесконечность'
+  }
+}
+console.log(a(5));
+`);
+}
+
+document.getElementById('b21').onclick = f21;
+
+// 22 Написать функцию, которая проверяет ввод на NaN. Почему нельзя проверить напрямую?
+function f22() {
+  console.log(`function a(x) {
+  let b = Number.isNaN(x);
+  if (b) {
+    return 'NaN'
+  } else {
+    return 'не NaN'
+  }
+}
+console.log(a(5));
+
+Потому что console.log(NaN === NaN); // false 
+`);
+}
+
+document.getElementById('b22').onclick = f22;
+
+// 23 Получить из числа NaN и Infinity
+function f23() {
+  console.log(`const initialNumber = 451;
+console.log(initialNumber * 'хочу стать не-числом'); // NaN
+console.log(initialNumber / 0); // Infinity 
+`);
+}
+
+document.getElementById('b23').onclick = f23;
