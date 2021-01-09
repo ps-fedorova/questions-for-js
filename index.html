@@ -4,142 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    name="viewport">
+        name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link href="./style.css" rel="stylesheet">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="./style.css" rel="stylesheet">
   <title>Вопросы по JS</title>
 </head>
 
 <body>
-  <h1>Вопросы по JavaScript</h1>
-  <h2>(ответы смотри в консоли)</h2>
-  <div class="info">
-    <button id="consoleClear">Очистить консоль</button>
-  </div>
+<h1>Вопросы по JavaScript</h1>
+<h2>(ответы смотри в консоли)</h2>
+<div class="info">
+  <button id="consoleClear">Очистить консоль</button>
+  <ul></ul>
+</div>
 
-  <ol>
-    <li>
-      <p>Чем отличается число и строка при выводе в консоль?</p>
-      <button id="b1">ответ</button>
-    </li>
-    <li>
-      <p>Где пишется код JS?</p>
-      <button id="b2">ответ</button>
-    </li>
-    <li>
-      <p>Перечислить арифметические операторы</p>
-      <button id="b3">ответ</button>
-    </li>
-    <li>
-      <p>Конструкция else ... if</p>
-      <button id="b4">ответ</button>
-    </li>
-    <li>
-      <p>Конструкция switch ... case (2 варианта)</p>
-      <button id="b5">ответ</button>
-    </li>
-    <li>
-      <p>Выбрать последний элемент массива let arr = [ 'q', 'w', 'e ', 'r'];</p>
-      <button id="b6">ответ</button>
-    </li>
-    <li>
-      <p>Добавить 't' в конец массива let arr = [ 'q', 'w', 'e ', 'r'];</p>
-      <button id="b7">ответ</button>
-    </li>
-    <li>
-      <p>Написать цикл while, который выведет в консоль все чётные цифры от 10 до 20</p>
-      <button id="b8">ответ</button>
-    </li>
-    <li>
-      <p>Написать цикл for, который выведет в консоль все чётные цифры от 10 до 20</p>
-      <button id="b9">ответ</button>
-    </li>
-    <li>
-      <p>Чем отличается цикл do...while от while?</p>
-      <button id="b10">ответ</button>
-    </li>
-    <li>
-      <p>Что выведет консоль? Какое значение выводится(старое или новое)?
-        <br>let a = 1; console.log(a++); console.log(a--);
-        <br>let b = 1; console.log(++b); console.log(--b);
-        <br>let c = 1; console.log(1+c); console.log(1-c);
-      </p>
-      <button id="b11">ответ</button>
-    </li>
-    <li>
-      <p>Что делает return?
-      <br>Что вернет функция, если результат отсутствует?
-      <br>Исполняется ли код после return?</p>
-      <button id="b12">ответ</button>
-    </li>
-    <li>
-      <p>Пары «ключ — значение» делятся на два типа. Какие и что они значат?</p>
-      <button id="b13">ответ</button>
-    </li>
-    <li>
-      <p>Получить доступ к свойству двумя способами let myObject = { stringKey: 'значение' };</p>
-      <button id="b14">ответ</button>
-    </li>
-    <li>
-      <p>Проверить, является ли "a" числом</p>
-      <button id="b15">ответ</button>
-    </li>
-    <li>
-      <p>Что выведет консоль?
-        <br>console.log(typeof undefined);
-        <br>console.log(typeof 0);
-        <br>console.log(typeof NaN);
-        <br>console.log(typeof -Infinity);
-        <br>console.log(typeof 10n);
-        <br>console.log(typeof true) ;
-        <br>console.log(typeof "foo");
-        <br>console.log(typeof Symbol("id"));
-        <br>console.log(typeof Math);
-        <br>console.log(typeof null);
-        <br>console.log(typeof alert);
-        <br>console.log(typeof function () {});
-      </p>
-      <button id="b16">ответ</button>
-    </li>
-    <li>
-      <p>Сколько типов данных в JS? Перечислить и описать</p>
-      <button id="b17">ответ</button>
-    </li>
-    <li>
-      <p>Какие данные среди примитивных являются ложными?</p>
-      <button id="b18">ответ</button>
-    </li>
-    <li>
-      <p>Вывести по первым буквам АННА
-        <br>const acrostic = [
-        <br>'Ангел лёг у края небосклона.',
-        <br>'Наклонившись, удивлялся безднам.',
-        <br>'Новый мир был синим и беззвездным.',
-        <br>'Ад молчал, не слышалось ни стона.'
-        ];</p>
-      <button id="b19">ответ</button>
-    </li>
-    <li>
-      <p>Написать код, чтобы в консоль вывела undefined и null</p>
-      <button id="b20">ответ</button>
-    </li>
-    <li>
-      <p>Написать функцию, которая проверяет код на бесконечность</p>
-      <button id="b21">ответ</button>
-    </li>
-    <li>
-      <p>Написать функцию, которая проверяет ввод на NaN. Почему нельзя проверить напрямую?</p>
-      <button id="b22">ответ</button>
-    </li>
-    <li>
-      <p>Получить из числа NaN и Infinity</p>
-      <button id="b23">ответ</button>
-    </li>
-  </ol>
-  <script src="./script.js"></script>
-  <script src="./test.js"></script>
+<ol></ol>
+
+<template id="question-template">
+  <li class="question-item">
+    <p></p>
+    <button>ответ</button>
+  </li>
+</template>
+
+<template id="navigation-template">
+  <li>
+    <a></a>
+  </li>
+</template>
+
+<script src="./data.js" type="module"></script>
+<script src="./index.js" type="module"></script>
+<!--<script src="./forTest.js" type="module"></script>-->
 </body>
 
 </html>

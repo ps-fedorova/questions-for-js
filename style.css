@@ -29,7 +29,7 @@ p {
   display: inline;
 }
 
-li {
+.question-item {
   margin: 5px 0;
   width: 70%;
   border-bottom: #ff8d00 1px solid;
