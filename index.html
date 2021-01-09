@@ -16,10 +16,16 @@
 <h2>(ответы смотри в консоли)</h2>
 <div class="info">
   <button id="consoleClear">Очистить консоль</button>
-  <ul></ul>
+  <ul class="navigation-list"></ul>
 </div>
 
-<ol></ol>
+<ol class="question-list"></ol>
+
+<template id="navigation-template">
+  <li class="navigation-item">
+    <a class="navigation-item-link"></a>
+  </li>
+</template>
 
 <template id="question-template">
   <li class="question-item">
@@ -28,15 +34,9 @@
   </li>
 </template>
 
-<template id="navigation-template">
-  <li>
-    <a></a>
-  </li>
-</template>
-
 <script src="./data.js" type="module"></script>
 <script src="./index.js" type="module"></script>
-<!--<script src="./forTest.js" type="module"></script>-->
+<script src="./forTests.js" type="module"></script>
 </body>
 
 </html>

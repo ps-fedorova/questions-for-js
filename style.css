@@ -36,16 +36,40 @@ p {
   padding-bottom: 5px;
 }
 
+.navigation-list {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 17px);
+  grid-column-gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-item-link {
+  text-decoration: none;
+  color: #ff8d00;
+  transition: .5s;
+}
+
+.navigation-item-link:hover {
+opacity: .5;
+}
+
+.navigation-item-link:link  {
+  color: black;
+}
+
 @media (max-width: 680px) {
   .info {
     display: none;
   }
-  li {
-    width: 100%;
-  }
-
-  ol {
+  .question-list {
     padding: 0 40px;
+  }
+  .question-item {
+    width: 100%;
   }
 
 }
