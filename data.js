@@ -214,12 +214,12 @@ NaN
   'Ад молчал, не слышалось ни стона.'
 ];
 
-let annaAkhmatova = '';
+let ANNA = '';
 
 for (let i = 0; i < acrostic.length; i += 1) {
-  annaAkhmatova += acrostic[i][0];
+  ANNA += acrostic[i][0];
 }
-console.log(annaAkhmatova);
+console.log(ANNA);
 `,
   },
   {
@@ -232,47 +232,39 @@ console.log(element);
 `,
   },
   {
-    question: "Написать функцию, которая проверяет код на бесконечность",
-    answer: `function a(x) {
- let b = Number.isFinite(x);
-  if (b) {
-    return 'Число конечно'
-  } else {
-    return 'Бесконечность'
-  }
-}
-console.log(a(5));
-`,
+    question: "Написать функцию, которая проверяет содержится ли в вводе число ",
+    answer: `const a = +prompt("Enter a number", '')
+alert(Number.isFinite(a))`,
   },
   {
     question: "Написать функцию, которая проверяет ввод на NaN. Почему нельзя проверить напрямую?",
-    answer: `function a(x) {
-  let b = Number.isNaN(x);
-  if (b) {
-    return 'NaN'
-  } else {
-    return 'не NaN'
-  }
-}
-console.log(a(5));
-
-Потому что console.log(NaN === NaN); // false
-`,
+    answer: `console.log(Number.isNaN(NaN))
+Потому что console.log(NaN === NaN); // false`,
   },
   {
     question: "Получить из числа NaN и Infinity",
     answer: `const initialNumber = 451;
 console.log(initialNumber * 'хочу стать не-числом'); // NaN
-console.log(initialNumber / 0); // Infinity
-`,
+console.log(initialNumber / 0); // Infinity`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Главное преимущество методов querySelector и querySelectorAll перед 
+<br>getElementById (получить элемент по идентификатору);
+<br>getElementsByClassName (получить элементы по имени класса);
+<br>getElementsByTagName (получить элементы по имени тега)`,
+    answer: "Поддержка составных селекторов",
   },
   {
-    question: "",
-    answer: "",
+    question: `С атрибутом HTML-элемента можно выполнить одно из четырёх действий:
+<br>1. проверить наличие;
+<br>2. получить значение;
+<br>3. изменить или установить значение;
+<br>4. удалить атрибут.
+<br>Привести примеры с соответствующими методами`,
+    answer: `elem.hasAttribute(name) – проверяет наличие атрибута
+elem.getAttribute(name) – получает значение атрибута
+elem.setAttribute(name, value) – устанавливает атрибут
+elem.removeAttribute(name) – удаляет атрибут`,
   },
   {
     question: "",
