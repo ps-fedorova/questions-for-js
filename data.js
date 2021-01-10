@@ -386,8 +386,4 @@ elem.removeAttribute(name) – удаляет атрибут`,
     question: "",
     answer: "",
   },
-  {
-    question: "",
-    answer: "",
-  },
 ]
