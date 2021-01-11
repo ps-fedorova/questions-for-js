@@ -261,30 +261,41 @@ console.log(initialNumber / 0); // Infinity`,
 <br>3. изменить или установить значение;
 <br>4. удалить атрибут.
 <br>Привести примеры с соответствующими методами`,
-    answer: `elem.hasAttribute(name) – проверяет наличие атрибута
-elem.getAttribute(name) – получает значение атрибута
-elem.setAttribute(name, value) – устанавливает атрибут
-elem.removeAttribute(name) – удаляет атрибут`,
+    answer: `elem.hasAttribute("name") – проверяет наличие атрибута
+elem.getAttribute("name") – получает значение атрибута
+elem.setAttribute("name", "value") – устанавливает атрибут
+elem.removeAttribute("name") – удаляет атрибут`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Согласно спецификации у setAttribute есть два обязательных параметра, но в то же время disabled не предполагает никакого значения. Что делать?",
+    answer: "disabledCheckbox.setAttribute('disabled', 'чтобы метод сработал, второй аргумент необходим, но его значение неважно');",
   },
   {
-    question: "",
-    answer: "",
+    question: "Как обратиться к атрибуту без методов? Например, окрасить кнопку в голубой",
+    answer: "document.querySelector('button').style.background = \"lightBlue\";",
   },
   {
-    question: "",
-    answer: "",
+    question: "Каким свойством удобно пользоваться для управления классами?",
+    answer: "classList",
   },
   {
-    question: "",
-    answer: "",
+    question: "Привести примеры работы методов classList",
+    answer: `1. classList.contains
+2. classList.add
+3. classList.remove
+4. classList.toggle`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Добавить всем элементам \"il\" любой класс (2 способами: через for и forEach)",
+    answer: `const li = document.querySelectorAll('li')
+
+li.forEach((el) => {
+  el.classList.add('a')
+})
+
+for (let i = 0; i < li.length; i++) {
+  li[i].classList.add('b')
+}`,
   },
   {
     question: "",
