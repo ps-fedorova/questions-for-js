@@ -298,24 +298,68 @@ for (let i = 0; i < li.length; i++) {
 }`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Какие свойства используют для управления содержимым элемента?",
+    answer: `1. innerHTML - для управления разметкой,
+2. textContent - для управления текстовым содержимым
+3. innerText - текст + CSS. То есть innerText проигнорирует всё, что скрыто свойством display: none
+свойство innerText не стандартизировано, лучше его не применять`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Есть три способа назначения обработчиков событий. Какие?",
+    answer: `Атрибут HTML: onclick="...".
+DOM-свойство: elem.onclick = function.
+Специальные методы: elem.addEventListener(event, handler[, options]) для добавления, removeEventListener для удаления.
+[, options] - необязательный параметр`
+    ,
   },
   {
-    question: "",
-    answer: "",
+    question: "Чем addEventListener выгодно отличается от elem.onclick = function?",
+    answer: "Метод addEventListener позволяет добавлять несколько обработчиков на одно событие одного элемента",
   },
   {
-    question: "",
-    answer: "",
+    question: "Привести пример самых часто используемых DOM-событий",
+    answer: `События мыши:
+
+* click – происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).
+* contextmenu – происходит, когда кликнули на элемент правой кнопкой мыши.
+* mouseover / mouseout – когда мышь наводится на / покидает элемент.
+* mousedown / mouseup – когда нажали / отжали кнопку мыши на элементе.
+* mousemove – при движении мыши.
+
+События на элементах управления:
+
+* submit – пользователь отправил форму <form>.
+* focus – пользователь фокусируется на элементе, например нажимает на <input>.
+
+Клавиатурные события:
+
+* keydown и keyup – когда пользователь нажимает / отпускает клавишу.
+
+События документа:
+
+* DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен.
+
+CSS events:
+
+* transitionend – когда CSS-анимация завершена.`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Создать самую простую форму в HTML. 
+<br>Повесить на событие "submit" обработчик, чтобы по клику на кнопку в консоль выводилось "Форма отправлена" (необходимо отменить стандартное поведение браузера)`,
+    answer: `<form class='form'>
+  <label>
+    <input class='form__input' type='text'>
+  </label>
+  <button class='form__button' type='submit'>Сохранить</button>
+</form>
+    
+    
+let formElement = document.querySelector('form');
+
+formElement.addEventListener('submit', function (evt) {
+  evt.preventDefault()
+  console.log('Форма отправлена');
+});`,
   },
   {
     question: "",

@@ -13,8 +13,8 @@ function addQuestions() {
     const questionElement = questionTemplate.cloneNode(true);
 
     questionElement.querySelector('p').innerHTML = data[i].question;
-    questionElement.querySelector('li').id = `question-${i}`;
-    questionElement.querySelector('button').id = `button-${i}`;
+    questionElement.querySelector('li').id = `question-${i + 1}`;
+    questionElement.querySelector('button').id = `button-${i + 1}`;
 
     questionList.append(questionElement);
   }
@@ -24,7 +24,7 @@ addQuestions();
 
 function addAnswers() {
   for (let i = 0; i < data.length; ++i) {
-    const buttonForAnswer = document.getElementById(`button-${i}`)
+    const buttonForAnswer = document.getElementById(`button-${i + 1}`)
     buttonForAnswer.onclick = () => console.log(data[i].answer)
   }
 }
@@ -34,7 +34,7 @@ addAnswers();
 function addNavigation() {
   for (let i = 0; i < data.length; ++i) {
     const navigationElement = navigationTemplate.cloneNode(true);
-    navigationElement.querySelector('a').href = `#question-${i}`;
+    navigationElement.querySelector('a').href = `#question-${i + 1}`;
     navigationElement.querySelector('a').textContent = `${i + 1}` ;
     navigationList.append(navigationElement);
   }
