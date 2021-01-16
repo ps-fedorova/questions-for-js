@@ -398,24 +398,53 @@ console.log('Вендетта'.startsWith('В')); // true
 console.log('Это ещё не конец'.endsWith('конец')); // true`,
   },
   {
-    question: "",
+    question: "Перевести строку 'ТтТтТтТтТ' в верхний регистр и в нижний",
     answer: "",
   },
   {
-    question: "",
-    answer: "",
+    question: `Написать функцию-палиндром через .split() и через цикл. 
+<br>Тест: "А роза упала на лапу Азора"`,
+    answer: `function palindrome(str) {
+      str = str.toLowerCase().replace(/\s/g,'');
+      return str === str.split('').reverse().join('');
+    }
+    
+      function palindrome2(str) {
+        str = str.toLowerCase().replace(/\s/g,'');
+        const lastIndex = str.length - 1;
+        for (let i = 0; i < str.length / 2; i++) {
+            if (str[i] !== str[lastIndex - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    console.log(palindrome('А роза упала на лапу Азора')); // true
+    console.log(palindrome2('А роза упала на лапу Азора')); // true`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что делает метод .split()? Что выведет консоль? 
+<br>console.log('Вася, Петя, Маша'.split(', ', 2));
+`,
+    answer: `Превращает строку в массив. Первый аргумент показывает, где заканчивается один элемент массива и начинается следующий
+[\"Вася\", \"Петя\"]
+`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что делает метод .slice()? Что выведет консоль? 
+<br>console.log('Не прислоняться'.slice(6, 10));
+<br>console.log('Не прислоняться'.slice(6));`,
+    answer: `Извлекает часть строки
+слон
+слоняться`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Вывести в консоль имя с большой буквы
+<br>const myName = prompt('Как Вас зовут?', '');`,
+    answer: `if (myName) {
+      console.log(myName[0].toUpperCase() + myName.slice(1));
+  }`,
   },
   {
     question: "",
