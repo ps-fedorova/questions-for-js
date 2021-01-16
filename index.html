@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        name="viewport">
+    name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <link href="/favicon.ico" type="icon">
   <link href="./style.css" rel="stylesheet">
@@ -12,42 +12,31 @@
 </head>
 
 <body>
-<h1>Вопросы по JavaScript</h1>
-<h2>(ответы смотри в консоли)</h2>
-<div class="info">
-  <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
-  <ul class="navigation-list"></ul>
+  <h1>Вопросы по JavaScript</h1>
+  <h2>(ответы смотри в консоли)</h2>
+  <div class="info">
+    <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
+    <ul class="navigation-list"></ul>
+  </div>
 
-  <form class='form'>
-    <label>
-      <input class='form__input' type='text'>
-    </label>
-    <button class='form__button' >
-      Сохранить
-    </button>
-  </form>
+  <ol class="question-list"></ol>
 
+  <template id="navigation-template">
+    <li class="navigation-item">
+      <a class="navigation-item-link"></a>
+    </li>
+  </template>
 
-</div>
+  <template id="question-template">
+    <li class="question-item">
+      <p></p>
+      <button>ответ</button>
+    </li>
+  </template>
 
-<ol class="question-list"></ol>
-
-<template id="navigation-template">
-  <li class="navigation-item">
-    <a class="navigation-item-link"></a>
-  </li>
-</template>
-
-<template id="question-template">
-  <li class="question-item">
-    <p></p>
-    <button>ответ</button>
-  </li>
-</template>
-
-<script src="./data.js" type="module"></script>
-<script src="./index.js" type="module"></script>
-<script src="./forTests.js" type="module"></script>
+  <script src="./data.js" type="module"></script>
+  <script src="./index.js" type="module"></script>
+  <script src="./forTests.js" type="module"></script>
 </body>
 
 </html>

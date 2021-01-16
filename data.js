@@ -347,7 +347,7 @@ CSS events:
     question: `Создать самую простую форму в HTML. 
 <br>Повесить на событие "submit" обработчик, чтобы по клику на кнопку в консоль выводилось "Форма отправлена" (необходимо отменить стандартное поведение браузера)`,
     answer: `<form class='form'>
-  <label>
+  <label>Форма
     <input class='form__input' type='text'>
   </label>
   <button class='form__button' type='submit'>Сохранить</button>
@@ -362,24 +362,40 @@ formElement.addEventListener('submit', function (evt) {
 });`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Чем работа через свойства innerHTML и textContent отличается от insertAdjacentHTML и insertAdjacentText",
+    answer: `каждый раз, когда вы переопределяете innerHTML и textContent, всё DOM-дерево, вложенное в элемент, удаляется и пересоздаётся заново
+insertAdjacentHTML и insertAdjacentText добавляют разметку и текст в документ и не затрагивают существующие элементы`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Синтаксис insertAdjacentHTML",
+    answer: "elem.insertAdjacentHTML('beforebegin' || 'afterbegin' || 'beforeend' || 'afterend', 'html')",
   },
   {
-    question: "",
-    answer: "",
+    question: "Чем value отличается от значения внутри тега?",
+    answer: `То, что указывается внутри тега отображается на UI, а 
+то, что указывается в value при отправке формы идет на сервер`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Чем var отличается от let и const?",
+    answer: `1. для «var» не существует блочной области видимости (var выходит за пределы блоков if, for и подобных.)
+2. «var» обрабатываются в начале запуска функции`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Методы поиска в строке
+<br>console.log('Яндекс.Практикум'.indexOf('Я'));
+<br>console.log('эспрессо'.indexOf('к'));
+<br>console.log('Ночь, улица, фонарь, аптека'.indexOf('фонарь'));
+<br>console.log('Шалаш'.indexOf('ш'));
+<br>console.log('Гарри Поттер и узник Азкабана'.includes('Гарри Поттер'));
+<br>console.log('Вендетта'.startsWith('В'));
+<br>console.log('Это ещё не конец'.endsWith('конец'));`,
+    answer: `console.log('Яндекс.Практикум'.indexOf('Я')); // 0
+console.log('эспрессо'.indexOf('к')); // -1
+console.log('Ночь, улица, фонарь, аптека'.indexOf('фонарь')); // 13
+console.log('Шалаш'.indexOf('ш')); // 4
+console.log('Гарри Поттер и узник Азкабана'.includes('Гарри Поттер')); // true
+console.log('Вендетта'.startsWith('В')); // true
+console.log('Это ещё не конец'.endsWith('конец')); // true`,
   },
   {
     question: "",
