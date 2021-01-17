@@ -6,11 +6,7 @@ h1 {
   padding: 10px 40px;
   margin: 0;
 }
-h2 {
-  padding: 0 40px;
-  margin: 0;
-  font-size: 20px;
-}
+
 .info {
   position: fixed;
   top: 20px;
@@ -24,9 +20,22 @@ h2 {
   align-items: center;
 }
 
-p {
-  margin: 0;
-  display: inline;
+pre {
+  margin: 5px auto;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.answer {
+  background-color: #c7ffb8;
+  display: none;
+}
+
+.answer_open {
+  display: block;
 }
 
 .question-item {

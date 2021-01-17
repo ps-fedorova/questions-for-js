@@ -5,9 +5,9 @@ export const data = [
   },
   {
     question: "Где пишется код JS?",
-    answer: `между тегов <script></script>
-перед закрывающим тегом </body>, но можно и в head с соответствующими атрибутами
-<script src="forTests.js"></script> В этом случае между тегами будет игнорироваться встроенный код`,
+    answer: `между тегов &#60;script&#62;&#60;/script&#62;
+перед закрывающим тегом &#60;/body&#62;, но можно и в head с соответствующими атрибутами
+&#60;script src="forTests.js"&#62;&#60;/script&#62; В этом случае между тегами будет игнорироваться встроенный код`,
   },
   {
     question: "Перечислить арифметические операторы",
@@ -20,20 +20,22 @@ year += 1;`,
   {
     question: "Конструкция else ... if",
     answer: `function x(a) {
-  if (a > 5) {
-    console.log('a > 5')
-  } else if (a > 10) {
-    console.log('a > 10')
+  if (a &#62; 5) {
+    console.log('a &#62; 5')
+  } else if (a &#62; 10) {
+    console.log('a &#62; 10')
   } else {
     console.log('ничего')
   }
 }
 
-fx(1);`,
+fx(1);
+`,
   },
   {
     question: "Конструкция switch ... case (2 варианта)",
-    answer: `Важно: проверка на равенство всегда строгая https://learn.javascript.ru/switch
+    answer: `Важно: проверка на равенство всегда строгая 
+<a href="https://learn.javascript.ru/switch">https://learn.javascript.ru/switch</a>
 
 let a = 4;
 
@@ -55,10 +57,10 @@ switch (a) {
 const i9 = +document.querySelector('.i-9').value;
 
 switch (true) {
-  case (i9 >= 1):
+  case (i9 &#62;= 1):
     out9.textContent = '1';
     break;
-  case (i9 >= 33):
+  case (i9 &#62;= 33):
     out9.textContent = '2';
     break;
 
@@ -78,14 +80,14 @@ switch (true) {
     question: "Написать цикл while, который выведет в консоль все чётные цифры от 10 до 20",
     answer: `let number = 10;
 
-while (number <= 20) {
+while (number &#60;= 20) {
     console.log(number += 2);
     number += 2;
 } `,
   },
   {
     question: "Написать цикл for, который выведет в консоль все чётные цифры от 10 до 20",
-    answer: `for (let i = 10; i <= 20; i += 2) {
+    answer: `for (let i = 10; i &#60;= 20; i += 2) {
   console.log(i)
 }`,
   },
@@ -94,15 +96,15 @@ while (number <= 20) {
     answer: `условие проверяется после каждой итерации, а не до неё
  Это гарантирует, что тело цикла выполнится хотя бы один раз.
  do {
-    <тело цикла>
+    &#60;тело цикла&#62;
 } while (условие);
 `,
   },
   {
     question: `Что выведет консоль? Какое значение выводится(старое или новое)?
-<br>let a = 1; console.log(a++); console.log(a--);
-<br>let b = 1; console.log(++b); console.log(--b);
-<br>let c = 1; console.log(1+c); console.log(1-c);`,
+let a = 1; console.log(a++); console.log(a--);
+let b = 1; console.log(++b); console.log(--b);
+let c = 1; console.log(1+c); console.log(1-c);`,
     answer: `1 "старое"
 2 "старое"
 2 "новое"
@@ -113,8 +115,8 @@ while (number <= 20) {
   },
   {
     question: `Что делает return?
-<br>Что вернет функция, если результат отсутствует?
-<br>Исполняется ли код после return?`,
+Что вернет функция, если результат отсутствует?
+Исполняется ли код после return?`,
     answer: `return завершает выполнение текущей функции и возвращает её значение
 undefined
 нет`
@@ -150,18 +152,18 @@ foo(b);
   },
   {
     question: `Что выведет консоль?
-        <br>console.log(typeof undefined);
-        <br>console.log(typeof 0);
-        <br>console.log(typeof NaN);
-        <br>console.log(typeof -Infinity);
-        <br>console.log(typeof 10n);
-        <br>console.log(typeof true) ;
-        <br>console.log(typeof "foo");
-        <br>console.log(typeof Symbol("id"));
-        <br>console.log(typeof Math);
-        <br>console.log(typeof null);
-        <br>console.log(typeof alert);
-        <br>console.log(typeof function () {});`,
+console.log(typeof undefined);
+console.log(typeof 0);
+console.log(typeof NaN);
+console.log(typeof -Infinity);
+console.log(typeof 10n);
+console.log(typeof true) ;
+console.log(typeof "foo");
+console.log(typeof Symbol("id"));
+console.log(typeof Math);
+console.log(typeof null);
+console.log(typeof alert);
+console.log(typeof function () {});`,
     answer: `typeof undefined    // "undefined"
 typeof 0            // "number"
 typeof NaN          // "number"
@@ -195,18 +197,18 @@ null
 undefined
 false
 0
-Пустая строка -> ""
+Пустая строка -&#62; ""
 NaN
 `,
   },
   {
     question: `Вывести по первым буквам АННА
-<br>const acrostic = [
-<br>'Ангел лёг у края небосклона.',
-<br>'Наклонившись, удивлялся безднам.',
-<br>'Новый мир был синим и беззвездным.',
-<br>'Ад молчал, не слышалось ни стона.'
-<br>];`,
+const acrostic = [
+'Ангел лёг у края небосклона.',
+'Наклонившись, удивлялся безднам.',
+'Новый мир был синим и беззвездным.',
+'Ад молчал, не слышалось ни стона.'
+];`,
     answer: `const acrostic = [
   'Ангел лёг у края небосклона.',
   'Наклонившись, удивлялся безднам.',
@@ -216,7 +218,7 @@ NaN
 
 let ANNA = '';
 
-for (let i = 0; i < acrostic.length; i += 1) {
+for (let i = 0; i &#60; acrostic.length; i += 1) {
   ANNA += acrostic[i][0];
 }
 console.log(ANNA);
@@ -249,18 +251,18 @@ console.log(initialNumber / 0); // Infinity`,
   },
   {
     question: `Главное преимущество методов querySelector и querySelectorAll перед 
-<br>getElementById (получить элемент по идентификатору);
-<br>getElementsByClassName (получить элементы по имени класса);
-<br>getElementsByTagName (получить элементы по имени тега)`,
+getElementById (получить элемент по идентификатору);
+getElementsByClassName (получить элементы по имени класса);
+getElementsByTagName (получить элементы по имени тега)`,
     answer: "Поддержка составных селекторов",
   },
   {
     question: `С атрибутом HTML-элемента можно выполнить одно из четырёх действий:
-<br>1. проверить наличие;
-<br>2. получить значение;
-<br>3. изменить или установить значение;
-<br>4. удалить атрибут.
-<br>Привести примеры с соответствующими методами`,
+1. проверить наличие;
+2. получить значение;
+3. изменить или установить значение;
+4. удалить атрибут.
+Привести примеры с соответствующими методами`,
     answer: `elem.hasAttribute("name") – проверяет наличие атрибута
 elem.getAttribute("name") – получает значение атрибута
 elem.setAttribute("name", "value") – устанавливает атрибут
@@ -289,11 +291,11 @@ elem.removeAttribute("name") – удаляет атрибут`,
     question: "Добавить всем элементам \"il\" любой класс (2 способами: через for и forEach)",
     answer: `const li = document.querySelectorAll('li')
 
-li.forEach((el) => {
+li.forEach((el) =&#62; {
   el.classList.add('a')
 })
 
-for (let i = 0; i < li.length; i++) {
+for (let i = 0; i &#60; li.length; i++) {
   li[i].classList.add('b')
 }`,
   },
@@ -328,8 +330,8 @@ DOM-свойство: elem.onclick = function.
 
 События на элементах управления:
 
-* submit – пользователь отправил форму <form>.
-* focus – пользователь фокусируется на элементе, например нажимает на <input>.
+* submit – пользователь отправил форму &#60;form&#62;.
+* focus – пользователь фокусируется на элементе, например нажимает на &#60;input&#62;.
 
 Клавиатурные события:
 
@@ -345,13 +347,13 @@ CSS events:
   },
   {
     question: `Создать самую простую форму в HTML. 
-<br>Повесить на событие "submit" обработчик, чтобы по клику на кнопку в консоль выводилось "Форма отправлена" (необходимо отменить стандартное поведение браузера)`,
-    answer: `<form class='form'>
-  <label>Форма
-    <input class='form__input' type='text'>
-  </label>
-  <button class='form__button' type='submit'>Сохранить</button>
-</form>
+Повесить на событие "submit" обработчик, чтобы по клику на кнопку в консоль выводилось "Форма отправлена" (необходимо отменить стандартное поведение браузера)`,
+    answer: `&#60;form class='form'&#62;
+  &#60;label&#62;Форма
+    &#60;input class='form__input' type='text'&#62;
+  &#60;/label&#62;
+  &#60;button class='form__button' type='submit'&#62;Сохранить&#60;/button&#62;
+&#60;/form&#62;
     
     
 let formElement = document.querySelector('form');
@@ -382,13 +384,13 @@ insertAdjacentHTML и insertAdjacentText добавляют разметку и 
   },
   {
     question: `Методы поиска в строке
-<br>console.log('Яндекс.Практикум'.indexOf('Я'));
-<br>console.log('эспрессо'.indexOf('к'));
-<br>console.log('Ночь, улица, фонарь, аптека'.indexOf('фонарь'));
-<br>console.log('Шалаш'.indexOf('ш'));
-<br>console.log('Гарри Поттер и узник Азкабана'.includes('Гарри Поттер'));
-<br>console.log('Вендетта'.startsWith('В'));
-<br>console.log('Это ещё не конец'.endsWith('конец'));`,
+console.log('Яндекс.Практикум'.indexOf('Я'));
+console.log('эспрессо'.indexOf('к'));
+console.log('Ночь, улица, фонарь, аптека'.indexOf('фонарь'));
+console.log('Шалаш'.indexOf('ш'));
+console.log('Гарри Поттер и узник Азкабана'.includes('Гарри Поттер'));
+console.log('Вендетта'.startsWith('В'));
+console.log('Это ещё не конец'.endsWith('конец'));`,
     answer: `console.log('Яндекс.Практикум'.indexOf('Я')); // 0
 console.log('эспрессо'.indexOf('к')); // -1
 console.log('Ночь, улица, фонарь, аптека'.indexOf('фонарь')); // 13
@@ -403,7 +405,7 @@ console.log('Это ещё не конец'.endsWith('конец')); // true`,
   },
   {
     question: `Написать функцию-палиндром через .split() и через цикл. 
-<br>Тест: "А роза упала на лапу Азора"`,
+Тест: "А роза упала на лапу Азора"`,
     answer: `function palindrome(str) {
       str = str.toLowerCase().replace(/\s/g,'');
       return str === str.split('').reverse().join('');
@@ -412,7 +414,7 @@ console.log('Это ещё не конец'.endsWith('конец')); // true`,
       function palindrome2(str) {
         str = str.toLowerCase().replace(/\s/g,'');
         const lastIndex = str.length - 1;
-        for (let i = 0; i < str.length / 2; i++) {
+        for (let i = 0; i &#60; str.length / 2; i++) {
             if (str[i] !== str[lastIndex - i]) {
                 return false;
             }
@@ -425,7 +427,7 @@ console.log('Это ещё не конец'.endsWith('конец')); // true`,
   },
   {
     question: `Что делает метод .split()? Что выведет консоль? 
-<br>console.log('Вася, Петя, Маша'.split(', ', 2));
+console.log('Вася, Петя, Маша'.split(', ', 2));
 `,
     answer: `Превращает строку в массив. Первый аргумент показывает, где заканчивается один элемент массива и начинается следующий
 [\"Вася\", \"Петя\"]
@@ -433,15 +435,15 @@ console.log('Это ещё не конец'.endsWith('конец')); // true`,
   },
   {
     question: `Что делает метод .slice()? Что выведет консоль? 
-<br>console.log('Не прислоняться'.slice(6, 10));
-<br>console.log('Не прислоняться'.slice(6));`,
+console.log('Не прислоняться'.slice(6, 10));
+console.log('Не прислоняться'.slice(6));`,
     answer: `Извлекает часть строки
 слон
 слоняться`,
   },
   {
     question: `Вывести в консоль имя с большой буквы
-<br>const myName = prompt('Как Вас зовут?', '');`,
+const myName = prompt('Как Вас зовут?', '');`,
     answer: `if (myName) {
       console.log(myName[0].toUpperCase() + myName.slice(1));
   }`,
