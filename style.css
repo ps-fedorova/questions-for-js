@@ -70,7 +70,7 @@ opacity: .5;
   color: black;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 580px) {
   .info {
     display: none;
   }
@@ -80,7 +80,9 @@ opacity: .5;
   .question-item {
     width: 100%;
   }
-
+  .answer {
+    background-color: #eeffe9;
+  }
 }
 
 .a {
