@@ -449,24 +449,74 @@ const myName = prompt('Как Вас зовут?', '');`,
   }`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Вывести в консоль 7.3 миллиона и микросекунду ",
+    answer: `console.log(7.3e6)
+console.log(1e-6)`,
   },
   {
-    question: "",
-    answer: "",
+    question: "4 функции для работы с округлением",
+    answer: `Math.floor(1.1)
+Math.ceil(1.1)
+Math.round(1.1)	
+Math.trunc(1.1)`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Как округлить число до 2 знаков после запятой? (2 способа)
+Привести оба результата к числу и вывести в консоль`,
+    answer: `console.log(Math.round(1.23456 * 100) / 100 )
+console.log(+1.23456.toFixed(2))`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что выведет консоль? console.log(0.1 + 0.2), 
+почему?
+как бороться?`,
+    answer: `0.30000000000000004
+Число хранится в памяти в бинарной форме, как последовательность бит – единиц и нулей. Но дроби, такие как 0.1, 0.2, которые выглядят довольно просто в десятичной системе счисления, на самом деле являются бесконечной дробью в двоичной форме.
+Округлять`,
   },
   {
-    question: "",
-    answer: "",
+    question: "Какими методами можно откинуть единицу измерения? Например, нужно получить числовое значение для 19.5€ и 100px",
+    answer: "parseInt('100px') и parseFloat('19.5€')",
+  },
+  {
+    question: `console.log(parseInt('100px'))
+console.log(parseFloat('12.5em'))
+console.log(parseInt('12.3'))
+console.log(parseFloat('12.3.4'))  
+console.log(parseInt('a123'))`,
+    answer: `console.log(parseInt('100px')) // 100
+console.log(parseFloat('12.5em')) // 12.5
+console.log(parseInt('12.3')) // 12
+console.log(parseFloat('12.3.4')) // 12.3
+console.log(parseInt('a123')) // NaN`,
+  },
+  {
+    question: "Вывести в консоль случайное счисло диапазона [0, 1)",
+    answer: "console.log(Math.random())",
+  },
+  {
+    question: `Написать функцию, которая возвращает случайное целое число в заданном интервале, включительно
+function getRandomIntInclusive(min, max) {}
+console.log(getRandomIntInclusive(1, 3))`,
+    answer: `function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+    }
+  
+console.log(getRandomIntInclusive(1, 3))
+
+Может показаться заманчивым использовать Math.round() для округления, но это может сделать распределение неравномерным`,
+  },
+  {
+    question: `Найти максимальный элемент в массиве через apply и через spread
+const arr = [10, 45, 50, 344, 30];`,
+    answer: `Math.max.apply(null, arr);
+Math.max(...arr);`,
+  },
+  {
+    question: "Каким методом можно проверить число на принадлежность к целым числам?",
+    answer: "Number.isInteger(5.6)",
   },
   {
     question: "",
