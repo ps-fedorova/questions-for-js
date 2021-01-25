@@ -202,6 +202,14 @@ NaN
 `,
   },
   {
+    question: `Что выведет консоль?
+console.log(Boolean({}));
+console.log(Boolean([]));`,
+    answer: `console.log(Boolean({})); // true
+console.log(Boolean([])); // true
+`,
+  },
+  {
     question: `Вывести по первым буквам АННА
 const acrostic = [
 'Ангел лёг у края небосклона.',
@@ -519,23 +527,101 @@ Math.max(...arr);`,
     answer: "Number.isInteger(5.6)",
   },
   {
-    question: "",
-    answer: "",
+    question: "Неявное преобразование типа — то, которое происходит без прямого указания разработчика. В JavaScript три вида неявного преобразования типов. Перечислить",
+    answer: `1. приведение к строке,
+2. приведение к числу,
+3. приведение к логическому типу`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что покажет консоль?
+console.log(1 + '');
+console.log(undefined + '');
+console.log(null >= 1);
+console.log('451' < 452);
+console.log(67 + +'33');
+console.log('3' - 1);
+console.log('4' / 4);
+console.log('4' + 4);`,
+    answer: `console.log(1 + ''); // 1 (строка)
+console.log(undefined + ''); // undefined
+console.log(null >= 1); // false
+console.log('451' < 452); // true
+console.log(67 + +'33'); // 100
+console.log('3' - 1); // 2
+console.log('4' / 4); // 1 
+console.log('4' + 4); // 44 (строка)`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Какими методами можно явно привести приметив к строке, числу и логическому типу?`,
+    answer: `String(2);
+ Number('2');
+ Boolean(2);`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что делает оператор "!!" ?`,
+    answer: `Переводит значение в логический тип
+
+!!true; // true
+!!'непустая строка'; // true
+!!''; // false
+!!1; // true
+!!0; // false 
+
+Например, вместо
+
+if (x != null)
+    return true;
+else
+    return false;
+можно воспользоваться изящным
+
+return !!x;`,
   },
   {
-    question: "",
-    answer: "",
+    question: `Что будет, если поставить && между правдивыми условиями?
+console.log(2 * 2 === 4 && 5 < 6 && 'Каждый может стать');`,
+    answer: `оператор вернёт последнее из них:
+console.log(2 * 2 === 4 && 5 < 6 && 'Каждый может стать'); // 'Каждый может стать'`,
   },
+  {
+    question: `Что будет, среди условий есть ложные?
+console.log(2 * 2 === 4 && undefined && 'Каждый может стать');    `,
+    answer: `&& вернёт из них первое ложное
+console.log(2 * 2 === 4 && undefined && 'Каждый может стать'); // undefined`,
+  },
+  {
+    question: `Приоритетность операторов "&&", "||" и "!"`,
+    answer: `сначала выполняется логическое НЕ, потом И, а затем — ИЛИ. 
+(Операции в скобках выполняются первыми)
+!, &&, ||`,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+
 ]
