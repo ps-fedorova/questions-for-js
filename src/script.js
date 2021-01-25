@@ -1,5 +1,7 @@
 'use strict'
 
+import './style.css';
+import './forTests.js';
 import { data } from './data.js';
 
 const navigationTemplate = document.querySelector('#navigation-template').content;
