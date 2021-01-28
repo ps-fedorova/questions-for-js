@@ -664,8 +664,42 @@ console.dir(elem) выводит элемент в виде DOM-объекта, 
 const textItem = document.createTextNode('Hello, world');`,
   },
   {
-    question: ``,
-    answer: ``,
+    question: `Существует 5 методов добавления элементов на страницу. Как они работают?`,
+    answer: `1. node.append(...nodes or strings) — добавляет узлы или строки в конец node;
+2. node.prepend(...nodes or strings) — в начало node;
+3. node.before(...nodes or strings) — до node;
+4. node.after(...nodes or strings) — после node;
+5. node.replaceWith(...nodes or strings) — заменяет node заданными узлами или строками.
+
+Пример: 
+const list = document.querySelector('.todo-list');
+
+const listItem = document.createElement('li');
+listItem.textContent = 'Полить цветы';
+
+// добавляем элемент списка в конец списка
+list.append(listItem); 
+
+Методы append, prepend, before, after и replaceWith принимают на вход любое количество аргументов. Это значит, что при передаче аргументов можно пользоваться «раскладыванием» массива аргументов, с которым вы познакомились в прошлой теме:
+const list = document.querySelector('.todo-list');
+
+// массив дел на сегодня
+const tasks = [
+  'Сделать проектную работу ',
+  'Погулять с собакой',
+  'Пройти туториал по Реакту'
+];
+
+// создадим из массива дел массив элементов
+const taskElements = tasks.map(task => {
+  const listItem = document.createElement('li');
+  listItem.textContent = task;
+  return listItem;
+});
+
+// добавим элементы в DOM, «разложив» массив
+list.append(...taskElements); 
+`,
   },
   {
     question: ``,
