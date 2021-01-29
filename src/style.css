@@ -3,12 +3,12 @@
 /*}*/
 
 h1 {
-  padding: 10px 40px;
+  padding: 10px 8px 10px 20px;
   margin: 0;
 }
 
 .info {
-  position: fixed;
+  position: absolute;
   top: 20px;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,10 @@ pre {
 
 .answer_open {
   display: block;
+}
+
+.question-list {
+  padding: 0 8px 0 20px;
 }
 
 .question-item {
@@ -70,13 +74,11 @@ opacity: .5;
   color: black;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .info {
     display: none;
   }
-  .question-list {
-    padding: 0 40px;
-  }
+
   .question-item {
     width: 100%;
   }
