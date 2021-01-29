@@ -698,7 +698,15 @@ const taskElements = tasks.map(task => {
 });
 
 // добавим элементы в DOM, «разложив» массив
-list.append(...taskElements); 
+list.append(...taskElements);
+
+// аналог через цикл:
+tasks.forEach((item) => {
+  const arrForItem = document.createElement("li");
+  arrForItem.textContent = item;
+
+  list.append(arrForItem);
+})
 `,
   },
   {
