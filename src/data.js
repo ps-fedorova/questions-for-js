@@ -677,30 +677,24 @@ const list = document.querySelector('.todo-list');
 const listItem = document.createElement('li');
 listItem.textContent = 'Полить цветы';
 
-// добавляем элемент списка в конец списка
 list.append(listItem); 
 
 Методы append, prepend, before, after и replaceWith принимают на вход любое количество аргументов. Это значит, что при передаче аргументов можно пользоваться «раскладыванием» массива аргументов:
+
 const list = document.querySelector('.todo-list');
+const tasks = ['1', '2', '3'];
 
-// массив дел на сегодня
-const tasks = [
-  'Сделать проектную работу ',
-  'Погулять с собакой',
-  'Пройти туториал по Реакту'
-];
-
-// создадим из массива дел массив элементов
 const taskElements = tasks.map(task => {
   const listItem = document.createElement('li');
   listItem.textContent = task;
   return listItem;
 });
 
-// добавим элементы в DOM, «разложив» массив
 list.append(...taskElements);
 
-// аналог через цикл:
+
+аналог через цикл:
+
 tasks.forEach((item) => {
   const arrForItem = document.createElement("li");
   arrForItem.textContent = item;
