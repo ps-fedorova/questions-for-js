@@ -704,6 +704,56 @@ tasks.forEach((item) => {
 `,
   },
   {
+    question: `Методы remove и closest. Привести примеры использования`,
+    answer: `document.querySelector('h1').remove();
+
+document.getElementById('consoleClear').closest('div') - возвращает ближайший родительский элемент с переданным селектором (div)`,
+  },
+  {
+    question: `Как выбрать ребенка и родителя DOM-элемента?`,
+    answer: `document.querySelector('ul').children - в свойстве children хранится псевдомассив дочерних элементов
+document.querySelector('body').children[0] - выбрать первый элемент массива
+
+parentElement – родитель-элемент (работает аналогично)
+
+Есть и другие ссылки:
+- первый и последний дочерний элемент (+2)
+- предыдущий и следующий соседи (+2)
+
+Все эти свойства доступны только для чтения. Перезаписать их не получится
+
+const body = document.querySelector('body');
+
+console.log(body.children); // HTMLCollection(3) [p, p, p]
+body.children = [];
+console.log(body.children); // HTMLCollection(3) [p, p, p]`,
+  },
+  {
+    question: `Как переместить DOM-элемент?`,
+    answer: `элемент удалится с прошлого места и встанет на новое
+    
+const list = document.querySelector('.todo-list');
+const listItems = list.children;
+
+list.append(listItems[0]); // переместили первый элемент todo-листа в конец
+
+справедливо для всех пяти методов добавления: append, prepend, before, after и replaceWith`,
+  },
+  {
+    question: `Как клонировать элемент? 
+Скопируются ли обработчики элемента?
+Добавится ли элемент в DOM?`,
+    answer: `const deepCopy = elem.cloneNode(true); // клонировать элемент вместе со всем его содержимым
+const shallowCopy = elem.cloneNode(false); // клонирование без дочерних элементов
+
+Обработчики событий элемента не скопируются. Их придётся добавить заново
+Метод cloneNode только копирует элемент, но не добавляет его в DOM. Для этого к копии используют append или др.`,
+  },
+  {
+    question: ``,
+    answer: ``,
+  },
+  {
     question: ``,
     answer: ``,
   },
