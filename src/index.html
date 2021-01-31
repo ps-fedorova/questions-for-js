@@ -4,33 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    name="viewport">
+        name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Вопросы по JS</title>
 </head>
 
-<body>
-  <h1>Вопросы по JavaScript</h1>
-  <div class="info">
-    <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
-    <ul class="navigation-list"></ul>
-  </div>
+<body class="body">
+<h1>Вопросы по JavaScript</h1>
+<section class="dashBoard">
+  <form>
+    <label for="fontSize">размер шрифта </label>
+    <input class="fontSize" id="fontSize" type="range" min="5" max="24" value="50%">
+  </form>
+  <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
+</section>
 
-  <ol class="question-list"></ol>
+<nav class="nav">
+  <ul class="navigation-list"></ul>
+</nav>
 
-  <template id="navigation-template">
-    <li class="navigation-item">
-      <a class="navigation-item-link"></a>
-    </li>
-  </template>
+<ol class="question-list"></ol>
 
-  <template id="question-template">
-    <li class="question-item">
-      <pre class="question"></pre>
-      <pre class="answer"></pre>
-      <button class="button-answer">ответ</button>
-    </li>
-  </template>
+<template id="navigation-template">
+  <li class="navigation-item">
+    <a class="navigation-item-link"></a>
+  </li>
+</template>
+
+<template id="question-template">
+  <li class="question-item">
+    <pre class="question"></pre>
+    <pre class="answer"></pre>
+    <button class="button-answer">ответ</button>
+  </li>
+</template>
 </body>
 
 </html>
