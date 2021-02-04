@@ -10,36 +10,38 @@
 <link rel="shortcut icon" href="favicon.ico"></head>
 
 <body class="body">
+
 <section class="dashBoard">
   <form>
     <label for="fontSize" id="valueFontSize"></label>
-    <input class="fontSize" id="fontSize" type="range" value="12" min="5" max="24">
+    <input class="fontSize" id="fontSize" max="24" min="5" type="range" value="14">
   </form>
   <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
 </section>
 <h1>Вопросы по JavaScript</h1>
 
 <nav class="nav">
-  <ul class="navigation-list"></ul>
+  <ul class="navigation-list">
+    <template id="navigation-template">
+      <li class="navigation-item">
+        <a class="navigation-item-link"></a>
+      </li>
+    </template>
+  </ul>
 </nav>
 
 <main>
-  <ol class="question-list"></ol>
+  <ol class="question-list">
+    <li id="question-template">
+      <div class="question-item">
+        <pre class="question"></pre>
+        <pre class="answer"></pre>
+        <button class="button-answer">ответ</button>
+      </div>
+    </li>
+  </ol>
 </main>
 
-<template id="navigation-template">
-  <li class="navigation-item">
-    <a class="navigation-item-link"></a>
-  </li>
-</template>
-
-<div id="question-template">
-  <li class="question-item">
-    <pre class="question"></pre>
-    <pre class="answer"></pre>
-    <button class="button-answer">ответ</button>
-  </li>
-</div>
 <script type="text/javascript" src="bundle.js"></script></body>
 
 </html>
