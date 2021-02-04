@@ -10,20 +10,22 @@
 </head>
 
 <body class="body">
-<h1>Вопросы по JavaScript</h1>
 <section class="dashBoard">
   <form>
-    <label for="fontSize">размер шрифта </label>
-    <input class="fontSize" id="fontSize" type="range" min="5" max="24" value="50%">
+    <label for="fontSize" id="valueFontSize"></label>
+    <input class="fontSize" id="fontSize" type="range" value="12" min="5" max="24">
   </form>
   <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
 </section>
+<h1>Вопросы по JavaScript</h1>
 
 <nav class="nav">
   <ul class="navigation-list"></ul>
 </nav>
 
-<ol class="question-list"></ol>
+<main>
+  <ol class="question-list"></ol>
+</main>
 
 <template id="navigation-template">
   <li class="navigation-item">
@@ -31,13 +33,13 @@
   </li>
 </template>
 
-<template id="question-template">
+<div id="question-template">
   <li class="question-item">
     <pre class="question"></pre>
     <pre class="answer"></pre>
     <button class="button-answer">ответ</button>
   </li>
-</template>
+</div>
 </body>
 
 </html>
