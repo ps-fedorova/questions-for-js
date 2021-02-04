@@ -12,11 +12,19 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 /** {*/
 /*  outline: dodgerblue solid 1px;*/
 /*}*/
+
+#link-B:before {
+  display: block;
+  content: "";
+  height: 100px;
+  margin: -100px 0 0;
+}
 
 .body {
   font-family: monospace;
@@ -31,15 +39,16 @@ main {
 .dashBoard {
   display: grid;
   grid-template-columns: repeat(4, 150px);
-  gap: 1vw;
+  gap: 10vw;
   position: sticky;
   left: 0;
   top: 0;
   background-color: var(--menu);
   border-bottom: var(--black) solid 1px;
   box-sizing: border-box;
-  padding: 1vw 3vw;
+  padding: 12px;
   width: calc(100vw);
+
 }
 
 h1 {
