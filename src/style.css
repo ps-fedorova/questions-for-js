@@ -19,13 +19,6 @@ html {
 /*  outline: dodgerblue solid 1px;*/
 /*}*/
 
-#link-B:before {
-  display: block;
-  content: "";
-  height: 100px;
-  margin: -100px 0 0;
-}
-
 .body {
   font-family: monospace;
   margin: 0;
@@ -67,7 +60,7 @@ main {
 }
 
 
-#consoleClear, #browser {
+#consoleClear, #JS_browser {
   width: 120px;
   margin-left: 12px;
 }
