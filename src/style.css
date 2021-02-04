@@ -55,10 +55,13 @@ main {
   justify-content: flex-end;
 }
 
-.dashBoard__fontSize, #JS {
-  width: 120px;
+.dashBoard__fontSize {
+  width: 125px;
 }
 
+#JS {
+  width: 120px;
+}
 
 #consoleClear, #JS_browser {
   width: 120px;
@@ -141,7 +144,7 @@ pre {
   position: fixed;
   overflow-y: scroll;
   height: calc(100vh - 80px);
-  top: 60px;
+  top: 63px;
   bottom: 20px;
   right: 5px;
 }
