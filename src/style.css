@@ -1,5 +1,6 @@
 :root {
   --deg: 5deg;
+  --active: #ff9311;
   --main: #ffa538;
   --second: #ffd29c;
   --answer: #fff2e1;
@@ -7,6 +8,10 @@
   --grey: #b3b3b3;
   --menu: #ffffff;
   --range: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /** {*/
@@ -51,13 +56,16 @@ input[type="range"] {
   -webkit-appearance: none;
   position: relative;
 }
+
 input[type="range"]:focus {
   outline: none;
 }
+
 input[type="range"]::-webkit-slider-runnable-track {
   background: var(--black);
   height: 2px;
 }
+
 input[type="range"]::-webkit-slider-thumb {
   width: 16px;
   height: 16px;
@@ -84,6 +92,7 @@ pre {
   word-break: break-word;
   line-height: 20px;
   margin: 8px auto;
+  font-size: 14px;
 }
 
 .answer {
@@ -147,10 +156,16 @@ button {
   background-color: var(--second);
   margin-bottom: 0;
   padding: 4px 6px;
+  transition: all .5s;
+}
+
+button:hover {
+  background-color: var(--main);
 }
 
 button:active, button:focus {
-  outline: var(--main);
+  outline: var(--active);
+  background-color: var(--active);
 }
 
 button::-moz-focus-inner {
@@ -171,9 +186,11 @@ input[type="range"] {
   -webkit-appearance: none;
   position: relative;
 }
+
 input[type="range"]:focus {
   outline: none;
 }
+
 input[type="range"]:before {
   position: absolute;
   content: "";
@@ -181,10 +198,12 @@ input[type="range"]:before {
   height: 2px;
   background: var(--grey);
 }
+
 input[type="range"]::-webkit-slider-runnable-track {
   background: var(--black);
   height: 2px;
 }
+
 input[type="range"]::-webkit-slider-thumb {
   width: 14px;
   height: 14px;
@@ -197,6 +216,7 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
   transition: 0.5s all ease;
 }
+
 #value {
   position: absolute;
   top: 2px;

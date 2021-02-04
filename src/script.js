@@ -36,7 +36,7 @@ function addQuestions() {
     getQuestionItem(questionElement).id = `question-${i + 1}`;
     getButtonForAnswer(questionElement).id = `button-${i + 1}`;
     getButtonForAnswer(questionElement).addEventListener('click', openAnswer);
-    getPre(questionElement).style.fontSize = '16px';
+    getPre(questionElement).style.fontSize = '14px';
 
     function editFontSize() {
       getQuestion(questionElement).style.fontSize = `${fontSize.value}px`;
@@ -50,6 +50,9 @@ function addQuestions() {
     questionList.append(questionElement);
   }
 }
+
+// удалить 1 шаблонный элемент из списка
+questionTemplate.remove();
 
 function openAnswer(evt) {
   evt.target.previousElementSibling.classList.toggle('answer_open');
