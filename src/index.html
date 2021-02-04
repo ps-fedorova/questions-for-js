@@ -12,11 +12,18 @@
 <body class="body">
 
 <section class="dashBoard">
-  <form>
-    <label for="fontSize" id="valueFontSize"></label>
-    <input class="fontSize" id="fontSize" max="24" min="5" type="range" value="14">
-  </form>
-  <button id="consoleClear" name="button-consoleClear">Очистить консоль</button>
+  <div class="dashBoard__route">
+    <button id="JS">JavaScript</button>
+    <button id="browser">Браузер</button>
+  </div>
+
+  <div class="dashBoard__item">
+    <form class="dashBoard__fontSize">
+      <label for="fontSize" id="valueFontSize"></label>
+      <input class="fontSize" id="fontSize" max="24" min="5" type="range" value="14">
+    </form>
+    <button id="consoleClear">Очистить консоль</button>
+  </div>
 </section>
 <h1>Вопросы по JavaScript</h1>
 

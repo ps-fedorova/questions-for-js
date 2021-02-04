@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 60px;
+  scroll-padding-top: 68px;
 }
 
 /** {*/
@@ -38,8 +38,9 @@ main {
 
 .dashBoard {
   display: grid;
-  grid-template-columns: repeat(4, 150px);
-  gap: 10vw;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   position: sticky;
   left: 0;
   top: 0;
@@ -47,8 +48,28 @@ main {
   border-bottom: var(--black) solid 1px;
   box-sizing: border-box;
   padding: 12px;
-  width: calc(100vw);
+  width: 100vw;
+  height: 63px;
+}
 
+.dashBoard__route {
+  display: flex;
+}
+
+.dashBoard__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dashBoard__fontSize, #JS {
+  width: 120px;
+}
+
+
+#consoleClear, #browser {
+  width: 120px;
+  margin-left: 12px;
 }
 
 h1 {
@@ -142,10 +163,6 @@ pre {
   list-style-type: none;
 }
 
-.navigation-item {
-
-}
-
 .navigation-item-link {
   text-decoration: none;
   color: var(--main);
@@ -179,16 +196,6 @@ button:active, button:focus {
 
 button::-moz-focus-inner {
   border: 0;
-}
-
-@media (max-width: 400px) {
-  .dashBoard {
-    display: none;
-  }
-
-  .question-item {
-    width: 100%;
-  }
 }
 
 input[type="range"] {
@@ -235,3 +242,12 @@ input[type="range"]::-webkit-slider-thumb {
   transition: 0.5s color ease;
 }
 
+@media (max-width: 540px) {
+  .dashBoard__item {
+    display: none;
+  }
+
+  .question-item {
+    width: 100%;
+  }
+}
