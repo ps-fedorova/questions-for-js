@@ -26,7 +26,7 @@ html {
 }
 
 main {
-  margin: 3vw 7vw 3vw 3vw;
+  padding: 0 40px 0 3vw;
 }
 
 .dashBoard {
@@ -41,7 +41,6 @@ main {
   border-bottom: var(--black) solid 1px;
   box-sizing: border-box;
   padding: 12px;
-  width: 100vw;
   height: 63px;
 }
 
@@ -63,7 +62,7 @@ main {
   width: 120px;
 }
 
-#consoleClear, #JS_browser {
+#JS_browser {
   width: 120px;
   margin-left: 12px;
 }
@@ -74,7 +73,6 @@ h1 {
 }
 
 .fontSize {
-  width: 100%;
   margin: 5px 0 0 0;
 }
 
@@ -142,15 +140,22 @@ pre {
 .nav {
   display: flex;
   position: fixed;
-  overflow-y: scroll;
   height: calc(100vh - 80px);
   top: 63px;
   bottom: 20px;
   right: 5px;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+
 .navigation-list {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -173,7 +178,7 @@ pre {
   color: black;
 }
 
-button {
+.button {
   border: none;
   background-color: var(--second);
   margin-bottom: 0;
@@ -181,16 +186,20 @@ button {
   transition: all .5s;
 }
 
-button:hover {
+.button:hover {
   background-color: var(--main);
 }
 
-button:active, button:focus {
+.button:active, .button:focus {
   outline: var(--active);
   background-color: var(--active);
 }
 
-button::-moz-focus-inner {
+.active {
+  background-color: var(--active);
+}
+
+.button::-moz-focus-inner {
   border: 0;
 }
 
@@ -241,9 +250,5 @@ input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 540px) {
   .dashBoard__item {
     display: none;
-  }
-
-  .question-item {
-    width: 100%;
   }
 }

@@ -1,7 +1,10 @@
 'use strict'
 import './style.css';
 import './forTests.js';
-import { data } from './data.js';
+import { dataJS } from "./dataJS.js";
+import { dataDOM } from "./dataDOM.js";
+
+let data
 
 const step = 5;
 const minFontValue = 5;
@@ -17,6 +20,10 @@ const fontSize = document.querySelector('.fontSize');
 
 const valueFontSize = document.getElementById("valueFontSize");
 
+const JS_Browser = document.getElementById("JS_browser");
+const JS = document.getElementById("JS");
+const title = document.querySelector(".title");
+
 const getQuestionItem = (questionElement) => questionElement.querySelector('.question-item');
 const getButtonForAnswer = (questionElement) => questionElement.querySelector('.button-answer');
 const getQuestion = (questionElement) => questionElement.querySelector('.question');
@@ -24,6 +31,28 @@ const getAnswer = (questionElement) => questionElement.querySelector('.answer');
 const getPre = (questionElement) => questionElement.querySelector('pre');
 
 const getNavigationElement = (navigationElement) => navigationElement.querySelector('a');
+
+if (document.location.hash === "") {
+  data = dataJS;
+  JS.classList.add("active");
+  title.textContent = "JavaScript";
+}
+
+if (document.location.hash === "#DOM") {
+  data = dataDOM;
+  JS_Browser.classList.add("active");
+  title.textContent = "Браузер";
+}
+
+JS_Browser.onclick = () => {
+  window.location.hash = "#DOM"
+  location.reload();
+}
+
+JS.onclick = () => {
+  window.location.hash = "#"
+  location.reload();
+}
 
 
 function addQuestions() {
@@ -51,8 +80,7 @@ function addQuestions() {
   }
 }
 
-// удалить 1 шаблонный элемент из списка
-questionTemplate.remove();
+questionTemplate.remove(); // удалить первый шаблонный элемент из списка
 
 function openAnswer(evt) {
   evt.target.previousElementSibling.classList.toggle('answer_open');
@@ -87,5 +115,3 @@ fontSize.addEventListener("input", () => {
   updateVar(fontSize.value);
   updateValue(fontSize.value);
 });
-
-document.getElementById('consoleClear').addEventListener('click', console.clear);
