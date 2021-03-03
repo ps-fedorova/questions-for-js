@@ -1,8 +1,9 @@
 'use strict'
 import './style.css';
 import './forTests.js';
-import { dataJS } from "./dataJS.js";
-import { dataDOM } from "./dataDOM.js";
+import { dataJS } from "./DATA/dataJS.js";
+import { dataDOM } from "./DATA/dataDOM.js";
+import { dataArrays } from "./DATA/dataArrays.js";
 
 let data
 
@@ -22,6 +23,7 @@ const valueFontSize = document.getElementById("valueFontSize");
 
 const JS_Browser = document.getElementById("JS_browser");
 const JS = document.getElementById("JS");
+const arrays = document.getElementById("Arrays");
 const title = document.querySelector(".title");
 
 const getQuestionItem = (questionElement) => questionElement.querySelector('.question-item');
@@ -44,9 +46,10 @@ if (document.location.hash === "#DOM") {
   title.textContent = "Браузер";
 }
 
-JS_Browser.onclick = () => {
-  window.location.hash = "#DOM"
-  location.reload();
+if (document.location.hash === "#arrays") {
+  data = dataArrays;
+  arrays.classList.add("active");
+  title.textContent = "Массивы";
 }
 
 JS.onclick = () => {
@@ -54,6 +57,15 @@ JS.onclick = () => {
   location.reload();
 }
 
+JS_Browser.onclick = () => {
+  window.location.hash = "#DOM"
+  location.reload();
+}
+
+arrays.onclick = () => {
+  window.location.hash = "arrays"
+  location.reload();
+}
 
 function addQuestions() {
   for (let i = 0; i < data.length; ++i) {

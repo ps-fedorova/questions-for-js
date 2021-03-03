@@ -30,9 +30,8 @@ main {
 }
 
 .dashBoard {
-  display: grid;
+  display: flex;
   justify-content: space-between;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
   position: sticky;
   left: 0;
@@ -58,13 +57,13 @@ main {
   width: 125px;
 }
 
-#JS {
-  width: 120px;
-}
-
-#JS_browser {
+.button_dashBoard {
   width: 120px;
   margin-left: 12px;
+}
+
+.button_dashBoard:first-child {
+  margin-left: 0;
 }
 
 h1 {
